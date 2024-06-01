@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/users.entity';
 import { UsersModule } from './users/users.module';
+import { CommissionsModule } from './commissions/commissions.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtGuard } from './auth/guards/jwt.guard';
+import { Commission } from './commissions/commissions.entity';
 
 @Module({
   imports: [
@@ -15,16 +17,17 @@ import { JwtGuard } from './auth/guards/jwt.guard';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
-        type: 'postgres',
-        host: configService.get<string>('DB_HOST'),
-        port: configService.get<number>('DB_PORT'),
+        type: 'sqlite',
+        // host: configService.get<string>('DB_HOST'),
+        // port: configService.get<number>('DB_PORT'),
         database: configService.get<string>('DB_NAME'),
-        password: configService.get<string>('DB_PASSWORD'),
-        entities: [User],
+        // password: configService.get<string>('DB_PASSWORD'),
+        entities: [User, Commission],
         synchronize: true,
       }),
       inject: [ConfigService],
     }),
+    CommissionsModule,
     UsersModule,
     AuthModule,
   ],

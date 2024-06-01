@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "کالای دیجیتال",
+      "commission_normal": 20,
+      "commission_normal_new": 25,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": null
+    },
+    {
+      "id": 2,
+      "name": "دسته موبایل",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 1
+    },
+    {
+      "id": 3,
+      "name": "دسته لپ تاپ",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 1
+    },
+    {
+      "id": 4,
+      "name": "دسته لپ تاپ ASUS",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 3
+    },
+    {
+      "name": "دسته لپ تاپ ACER",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 3
+    },
+    {
+      "id": 6,
+      "name": "دسته موبایل سامسونگ",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 3
+    },
+    {
+      "id": 7,
+      "name": "دسته موبایل ایفون",
+      "commission_normal": 10,
+      "commission_normal_new": 15,
+      "commission_promotion": 20,
+      "commission_promotion_new": 25,
+      "parent_id": 3
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { UUID } from 'crypto';
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
+type UserStatus = null | 'approved';
 @Entity({ name: 'user' })
 export class User {
   @PrimaryGeneratedColumn()
@@ -10,6 +11,9 @@ export class User {
   email: string;
 
   @Column()
+  phone: string;
+
+  @Column({ select: false })
   password: string;
 
   @Column()
@@ -17,4 +21,10 @@ export class User {
 
   @Column()
   lastName: string;
+
+  @Column({ nullable: true })
+  verify_code?: string;
+
+  @Column({ nullable: true })
+  status?: UserStatus;
 }

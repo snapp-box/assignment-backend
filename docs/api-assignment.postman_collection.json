@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "8268c8d3-b6d6-465f-9db7-547f244c12b0",
+		"name": "api-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32758785"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"masoud.it2013@gmail.com\",\n    \"password\": \"108027M@s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"masoud.it2013@gmail.com\",\n    \"verify_code\": \"9028\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resend-code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"masoud.it2013@gmail.com\",\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/resend-code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"resend-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"masoud2\",\n    \"lastName\":\"test\",\n    \"email\":\"masoud.it2013@gmail.com\",\n    \"password\": \"108027M@s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissinos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE3MTgyMjY5LCJleHAiOjE3MTcxODQyNjl9.vLFmj9rhj3PRSKesFy9ZZTpx6Ui5EZLTEYezxGCx0tA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/commissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissinos-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE3MTgyMjY5LCJleHAiOjE3MTcxODQyNjl9.vLFmj9rhj3PRSKesFy9ZZTpx6Ui5EZLTEYezxGCx0tA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"کالای دیجیتال (Digital Goods)\",\n    \"commission_normal\": 17.114488206062568,\n    \"commission_normal_new\": 23.668699185780262,\n    \"commission_promotion\": 15.295479206159495,\n    \"commission_promotion_new\": 20.69830989281403,\n    \"parent_id\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/commissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissinos-update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE3MTgyMjY5LCJleHAiOjE3MTcxODQyNjl9.vLFmj9rhj3PRSKesFy9ZZTpx6Ui5EZLTEYezxGCx0tA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"کالای دیجیتال (Digital Goods)\",\n    \"commission_normal\": 20.114488206062568,\n    \"commission_promotion\": 15.295479206159495,\n    \"parent_id\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/commissions/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commissions",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissinos-delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE3MTgyMjY5LCJleHAiOjE3MTcxODQyNjl9.vLFmj9rhj3PRSKesFy9ZZTpx6Ui5EZLTEYezxGCx0tA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"کالای دیجیتال (Digital Goods)\",\n    \"commission_normal\": 20.114488206062568,\n    \"commission_promotion\": 15.295479206159495,\n    \"parent_id\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/commissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissinos-creat-batch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n      \"id\": 1,\n      \"name\": \"کالای دیجیتال\",\n      \"commission_normal\": 20,\n      \"commission_normal_new\": 25,\n      \"commission_promotion\": 20,\n      \"commission_promotion_new\": 25,\n      \"parent_id\": null\n    },\n    {\n      \"id\": 2,\n      \"name\": \"دسته موبایل\",\n      \"commission_normal\": 10,\n      \"commission_normal_new\": 15,\n      \"commission_promotion\": 20,\n      \"commission_promotion_new\": 25,\n      \"parent_id\": 1\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/commissions/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commissions",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users-update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzE3MTY2NjUxLCJleHAiOjE3MTcxNjg2NTF9.eS074ydSjCLfzLOTpe3SWdQLpjOugA_EI1WrPNGPMhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hc291ZC5pdDIwMTNAZ21haWwuY29tIiwiaWQiOjIsImlhdCI6MTcxNzE2MzEwOCwiZXhwIjoxNzE3MTY1MTA4fQ.sFzC6rlPfMDoSqnmIwab4yWs09ofBlK3Yp594DlfCaE",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"firstName\":\"232\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

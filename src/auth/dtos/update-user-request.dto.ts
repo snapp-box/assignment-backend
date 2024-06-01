@@ -1,7 +1,9 @@
-export type RegisterRequestDto = {
+import { UUID } from 'crypto';
+
+export type UpdateUserRequestDto = {
+  id: UUID;
   firstName: string;
   lastName: string;
   email: string;
   password: string;
-  phone: string;
 };
