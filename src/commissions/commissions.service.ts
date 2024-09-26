@@ -4,7 +4,7 @@ import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Commission } from './commissions.entity';
 import { UUID } from 'crypto';
 import { CommissionRequestDto } from 'src/auth/dtos/commission-request.dto';
-import * as MOCKED_DATA from './../database/file.json';
+import * as MOCKED_DATA from './../database/statics.json';
 
 @Injectable()
 export class CommissionsService {
@@ -36,7 +36,7 @@ export class CommissionsService {
   createBatch(body: CommissionRequestDto[]): Promise<Commission | null> {
     console.log('x-----', body);
 
-    MOCKED_DATA.data.map((item) => {
+    MOCKED_DATA.map((item) => {
       return this.commissionsRepository.save({
         name: item.name,
         commission_normal: item.commission_normal,
