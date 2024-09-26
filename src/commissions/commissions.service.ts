@@ -33,9 +33,8 @@ export class CommissionsService {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   createBatch(body: CommissionRequestDto[]): Promise<Commission | null> {
-    console.log('x-----', body);
-
     MOCKED_DATA.map((item) => {
       return this.commissionsRepository.save({
         name: item.name,
@@ -43,7 +42,7 @@ export class CommissionsService {
         commission_normal_new: item.commission_normal_new,
         commission_promotion: item.commission_promotion,
         commission_promotion_new: item.commission_promotion_new,
-        parent_id: item.parent_id,
+        parent_id: item.parent_id !== null ? item.parent_id : null,
       });
     });
     return null;

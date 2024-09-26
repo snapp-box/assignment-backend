@@ -722,7 +722,7 @@ const listGenreateor = (catNames) => {
   // set root
   data.push(generateItem(catNames[0], data.length + 1, null));
   // filter 1%3
-  const level1 = catNames.filter((_, i) => i % 3 === 0);
+  const level1 = catNames.filter((_, i) => i % 3 === 0 && i !== 0);
   const levetl1StartId = data[data.length - 1].id;
   level1.forEach((name, index) => {
     const idx = rootId + index + 1;
